@@ -74,80 +74,89 @@
       ]
     },
     {
-      "titulo": "Data Science e Inteligência Artificial",
-      "cor": "#9cd33b",
+      "titulo": "Músicas",
+      "cor": "crimson",
       "link_extra": {
-        "text": "Cursos de Data Science na Alura",
-        "url": "https://www.alura.com.br/formacao-data-science"
+        "text": "Um mix diferenciado!"
       },
       "videos": [
         {
-          "titulo": "Teste de Turing",
-          "url": "https://www.youtube.com/watch?v=BaPGU4JWa34"
+          "titulo": "Muse - Resistance",
+          "url": "https://www.youtube.com/watch?v=rI7xpEIblUE"
         },
         {
-          "titulo": "O que é Data Science?",
-          "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s"
+          "titulo": "Artic Monkeys - No. 1 Party Anthem",
+          "url": "https://www.youtube.com/watch?v=6QxDItQF2ps"
         },
         {
-          "titulo": "Melhor forma de aprender Python",
-          "url": "https://www.youtube.com/watch?v=Gojqw9BQ5qY"
+          "titulo": "Emicida - Ooorra",
+          "url": "https://www.youtube.com/watch?v=p9JHGj_AhVE"
         },
         {
-          "titulo": "Como ingressar no mercado de Data Science?",
-          "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
+          "titulo": "Guns N' Roses - Don't Cry",
+          "url": "https://www.youtube.com/watch?v=zRIbf6JqkNc"
+        },
+        {
+          "titulo": "Thiaguinho - Ponto Fraco",
+          "url": "https://www.youtube.com/watch?v=Zl6X0BLV6bk"
+        },
+        {
+          "titulo": "Queen - Bohemian Rhapsody",
+          "url": "https://www.youtube.com/watch?v=oMOoV6RuJps"
         }
       ]
     },
     {
-      "titulo": "Filmes",
+      "titulo": "Tecnologia",
       "cor": "orange",
+      "link_extra": {
+        "text": "Avanços e novas perspectivas"
+      },
       "videos": [
         {
-          "titulo": "Interestellar",
-          "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
+          "titulo": "A I.A. Foi Longe Demais",
+          "url": "https://www.youtube.com/watch?v=pbVwH8o837A"
         },
         {
-          "titulo": "Gattaca",
-          "url": "https://www.youtube.com/watch?v=Dl0tYLbrhhs"
+          "titulo": "The Future we're building",
+          "url": "https://www.youtube.com/watch?v=zIwLWfaAg-8"
         },
         {
-          "titulo": "A Chegada",
-          "url": "https://www.youtube.com/watch?v=rNciXGzYZms"
+          "titulo": "How AI can save our humanity",
+          "url": "https://www.youtube.com/watch?v=ajGgd9Ld-Wc"
         },
         {
-          "titulo": "Feitiço do Tempo",
-          "url": "https://www.youtube.com/watch?v=zi8d69P9NvI"
+          "titulo": "How will Autonomous Vehicles transform our Cities ?",
+          "url": "https://www.youtube.com/watch?v=tTOFMwKEg7o"
         }
       ]
     },
     {
-      "titulo": "Games",
+      "titulo": "Comédia",
       "cor": "red",
       "link_extra": {
-        "text": "Formação de Jogos na Alura",
-        "url": "https://www.alura.com.br/formacao-jogos-unity"
+        "text": "Rir faz bem =)"
       },
       "videos": [
         {
-          "titulo": "Final Fantasy 7",
-          "url": "https://www.youtube.com/watch?v=I_ATSCTnUD8"
+          "titulo": "Rodrigo Marques - O Problema é Meu",
+          "url": "https://www.youtube.com/watch?v=xaq5wV24TH0"
         },
         {
-          "titulo": "Assassins Creed Valhalla",
-          "url": "https://www.youtube.com/watch?v=KDfdjB9uL0U"
+          "titulo": "Afonso Padilha - Espalhando a Palavra",
+          "url": "https://www.youtube.com/watch?v=BmQswwdkj_E"
         },
         {
-          "titulo": "God of War 4",
-          "url": "https://www.youtube.com/watch?v=FyIwEFXOcaE"
+          "titulo": "Thiago Ventura - Isso é tudo que eu tenho",
+          "url": "https://www.youtube.com/watch?v=Q3MRZKW2Llk"
         },
         {
-          "titulo": "Resident Evil 8",
-          "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
+          "titulo": "Márcio Donato - E olha que eu tô sóbrio",
+          "url": "https://www.youtube.com/watch?v=4J8y2vz7bws"
         },
         {
-          "titulo": "Pokémon Let's Go Pikachu/Eevee",
-          "url": "https://www.youtube.com/watch?v=L56q_k2ydrs"
+          "titulo": "Fábio Porchat no Clube do Minhoca",
+          "url": "https://www.youtube.com/watch?v=CQGStOiYPbU"
         }
       ]
     },
