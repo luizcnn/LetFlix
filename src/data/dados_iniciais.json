@@ -1,6 +1,101 @@
 {
   "categorias": [
     {
+      "titulo": "Tecnologia",
+      "cor": "orange",
+      "link_extra": {
+        "text": "Avanços e novas perspectivas"
+      },
+      "videos": [
+        {
+          "titulo": "The Future we're building",
+          "url": "https://www.youtube.com/watch?v=zIwLWfaAg-8"
+        },
+        {
+          "titulo": "A I.A. Foi Longe Demais",
+          "url": "https://www.youtube.com/watch?v=pbVwH8o837A"
+        },
+        {
+          "titulo": "Redes Neurais e Machine Learning",
+          "url": "https://www.youtube.com/watch?v=1_c_MA1F-vU"
+        },
+        {
+          "titulo": "How AI can save our humanity",
+          "url": "https://www.youtube.com/watch?v=ajGgd9Ld-Wc"
+        },
+        {
+          "titulo": "Recent Advances in AI and Machine Learning",
+          "url": "https://www.youtube.com/watch?v=QI5Gvn8FDG0"
+        },
+        {
+          "titulo": "How will Autonomous Vehicles transform our Cities ?",
+          "url": "https://www.youtube.com/watch?v=tTOFMwKEg7o"
+        }
+      ]
+    },
+    {
+      "titulo": "Músicas",
+      "cor": "#5f9ea0",
+      "link_extra": {
+        "text": "Um mix diferenciado!"
+      },
+      "videos": [
+        {
+          "titulo": "Muse - Resistance",
+          "url": "https://www.youtube.com/watch?v=rI7xpEIblUE"
+        },
+        {
+          "titulo": "Artic Monkeys - No. 1 Party Anthem",
+          "url": "https://www.youtube.com/watch?v=6QxDItQF2ps"
+        },
+        {
+          "titulo": "Emicida - Ooorra",
+          "url": "https://www.youtube.com/watch?v=p9JHGj_AhVE"
+        },
+        {
+          "titulo": "Guns N' Roses - Don't Cry",
+          "url": "https://www.youtube.com/watch?v=zRIbf6JqkNc"
+        },
+        {
+          "titulo": "Thiaguinho - Ponto Fraco",
+          "url": "https://www.youtube.com/watch?v=Zl6X0BLV6bk"
+        },
+        {
+          "titulo": "Queen - Bohemian Rhapsody",
+          "url": "https://www.youtube.com/watch?v=oMOoV6RuJps"
+        }
+      ]
+    },
+    {
+      "titulo": "Comédia",
+      "cor": "red",
+      "link_extra": {
+        "text": "Rir faz bem =)"
+      },
+      "videos": [
+        {
+          "titulo": "Rodrigo Marques - O Problema é Meu",
+          "url": "https://www.youtube.com/watch?v=xaq5wV24TH0"
+        },
+        {
+          "titulo": "Afonso Padilha - Espalhando a Palavra",
+          "url": "https://www.youtube.com/watch?v=BmQswwdkj_E"
+        },
+        {
+          "titulo": "Thiago Ventura - Isso é tudo que eu tenho",
+          "url": "https://www.youtube.com/watch?v=Q3MRZKW2Llk"
+        },
+        {
+          "titulo": "Márcio Donato - E olha que eu tô sóbrio",
+          "url": "https://www.youtube.com/watch?v=4J8y2vz7bws"
+        },
+        {
+          "titulo": "Fábio Porchat no Clube do Minhoca",
+          "url": "https://www.youtube.com/watch?v=CQGStOiYPbU"
+        }
+      ]
+    },
+    {
       "titulo": "Front End",
       "link": "https://www.alura.com.br/formacao-front-end",
       "cor": "#6BD1FF",
@@ -70,93 +165,6 @@
         {
           "titulo": "Usando Git Direito",
           "url": "https://www.youtube.com/watch?v=6OokP-NE49k"
-        }
-      ]
-    },
-    {
-      "titulo": "Músicas",
-      "cor": "crimson",
-      "link_extra": {
-        "text": "Um mix diferenciado!"
-      },
-      "videos": [
-        {
-          "titulo": "Muse - Resistance",
-          "url": "https://www.youtube.com/watch?v=rI7xpEIblUE"
-        },
-        {
-          "titulo": "Artic Monkeys - No. 1 Party Anthem",
-          "url": "https://www.youtube.com/watch?v=6QxDItQF2ps"
-        },
-        {
-          "titulo": "Emicida - Ooorra",
-          "url": "https://www.youtube.com/watch?v=p9JHGj_AhVE"
-        },
-        {
-          "titulo": "Guns N' Roses - Don't Cry",
-          "url": "https://www.youtube.com/watch?v=zRIbf6JqkNc"
-        },
-        {
-          "titulo": "Thiaguinho - Ponto Fraco",
-          "url": "https://www.youtube.com/watch?v=Zl6X0BLV6bk"
-        },
-        {
-          "titulo": "Queen - Bohemian Rhapsody",
-          "url": "https://www.youtube.com/watch?v=oMOoV6RuJps"
-        }
-      ]
-    },
-    {
-      "titulo": "Tecnologia",
-      "cor": "orange",
-      "link_extra": {
-        "text": "Avanços e novas perspectivas"
-      },
-      "videos": [
-        {
-          "titulo": "A I.A. Foi Longe Demais",
-          "url": "https://www.youtube.com/watch?v=pbVwH8o837A"
-        },
-        {
-          "titulo": "The Future we're building",
-          "url": "https://www.youtube.com/watch?v=zIwLWfaAg-8"
-        },
-        {
-          "titulo": "How AI can save our humanity",
-          "url": "https://www.youtube.com/watch?v=ajGgd9Ld-Wc"
-        },
-        {
-          "titulo": "How will Autonomous Vehicles transform our Cities ?",
-          "url": "https://www.youtube.com/watch?v=tTOFMwKEg7o"
-        }
-      ]
-    },
-    {
-      "titulo": "Comédia",
-      "cor": "red",
-      "link_extra": {
-        "text": "Rir faz bem =)"
-      },
-      "videos": [
-        {
-          "titulo": "Rodrigo Marques - O Problema é Meu",
-          "url": "https://www.youtube.com/watch?v=xaq5wV24TH0"
-        },
-        {
-          "titulo": "Afonso Padilha - Espalhando a Palavra",
-          "url": "https://www.youtube.com/watch?v=BmQswwdkj_E"
-        },
-        {
-          "titulo": "Thiago Ventura - Isso é tudo que eu tenho",
-          "url": "https://www.youtube.com/watch?v=Q3MRZKW2Llk"
-        },
-        {
-          "titulo": "Márcio Donato - E olha que eu tô sóbrio",
-          "url": "https://www.youtube.com/watch?v=4J8y2vz7bws"
-        },
-        {
-          "titulo": "Fábio Porchat no Clube do Minhoca",
-          "url": "https://www.youtube.com/watch?v=CQGStOiYPbU"
         }
       ]
     },
