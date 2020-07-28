@@ -13,7 +13,7 @@ function App() {
       <BannerMain 
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"O que faz uma desenvolvedora front-end? #HipstersPontoTube"}
+        videoDescription={"Elon Musk disserta no TedTalk sobre as perspectivas futuras do mundo com IA Autônoma"}
       />
 
       <Carousel 
