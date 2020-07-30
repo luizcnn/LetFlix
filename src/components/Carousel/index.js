@@ -11,6 +11,7 @@ function Carousel({
   const categoryColor = category.cor;
   const categoryExtraLink = category.link_extra;
   const videos = category.videos;
+
   return (
     <VideoCardGroupContainer>
       {categoryTitle && (
@@ -25,7 +26,7 @@ function Carousel({
           }
         </>
       )}
-      <Slider>
+      <Slider color={categoryColor}>
         {videos.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
             return null;
