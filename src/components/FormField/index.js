@@ -1,10 +1,12 @@
 import React from 'react'
 
-function checkType(type, name, value, onChange) {
+function typeFormField(type, name, value, onChange, className, placeholder) {
     if(type === "textArea"){
         return(
-            <textarea 
+            <textarea
+                className={className} 
                 type="text"
+                placeholder={placeholder}
                 name={name}
                 value={value}
                 onChange={onChange} 
@@ -12,8 +14,10 @@ function checkType(type, name, value, onChange) {
         )
     } else {
         return(
-            <input 
-                type={type}                
+            <input
+                className={className} 
+                type={type}
+                placeholder={placeholder}                
                 name={name}
                 value={value}
                 onChange={onChange} 
@@ -22,12 +26,13 @@ function checkType(type, name, value, onChange) {
     }
 }
 
-function FormField({type, label, name, value, onChange}) {
+function FormField({type, label, name, value, onChange, className, placeholder}) {
     return (
-        <div>
+        <div className="FormField">
             <label>
                 {label}
-                {checkType(type, name, value, onChange)}
+                <br/>
+                {typeFormField(type, name, value, onChange, className, placeholder)}
             </label>
         </div>
     )

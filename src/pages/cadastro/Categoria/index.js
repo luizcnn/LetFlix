@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormField';
+import './Categoria.css'
 
 function CadastroCategoria() {
 
@@ -32,7 +33,9 @@ function CadastroCategoria() {
         <PageDefault>
             <h1>Cadastro de Categoria: {values.nome}</h1>
 
-            <form onSubmit={(e) => {
+            <form 
+                className="form"
+                onSubmit={(e) => {
                 e.preventDefault()
             
                 setCategorias([
@@ -44,25 +47,31 @@ function CadastroCategoria() {
                 
             }}>
 
-                <FormField 
+                <FormField
+                    className="field-nome" 
                     value={values.nome}
                     type="text"
                     name="nome"
                     label="Nome da Categoria:"
+                    placeholder="Nome"
                     onChange={handleChange}
                 />
 
                 <FormField
+                    className="field-descricao"
                     value={values.descricao}
                     type="textArea"
                     name="descricao"
+                    placeholder="Descrição"
                     label="Descrição:"
                     onChange={handleChange}
                 />
 
                 <FormField
+                    className="field-cor"
                     type = "color"
                     name="cor"
+                    placeholder="Cor"
                     label="Cor:"
                     value={values.cor}
                     onChange={handleChange}

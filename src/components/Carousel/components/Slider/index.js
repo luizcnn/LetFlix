@@ -38,8 +38,8 @@ export const SliderItem = styled.li`
   }
 `;
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+function SampleArrow(props) {
+  const { className ,onClick, style } = props;
   return (
     <div
       className={className}
@@ -48,18 +48,6 @@ function SampleNextArrow(props) {
     />
   );
 }
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: props.color }}
-      onClick={onClick}
-    />
-  );
-}
-
 
 const Slider = ( props ) => (
   <Container>
@@ -71,8 +59,8 @@ const Slider = ( props ) => (
       variableWidth: true,
       adaptiveHeight: true,
       draggable: true,
-      nextArrow: <SampleNextArrow color={props.color} />,
-      prevArrow: <SamplePrevArrow color={props.color}/>,
+      nextArrow: <SampleArrow color={props.color}/>,
+      prevArrow: <SampleArrow color={props.color}/>
     }}
     >
       {props.children}

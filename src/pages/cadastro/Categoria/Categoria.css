@@ -1,0 +1,22 @@
+
+.FormField 
+    .field-nome, .field-descricao, .field-cor {
+        background-color: #53585d;
+        width: 100%;
+        margin: 20px 0px;
+        border-radius: 5px;
+        color: var(--grayMedium)
+}
+
+.FormField .field-nome {
+    padding: 5px 0px;
+    margin: 5px 0px;
+}
+
+.FormField .field-descricao {
+    padding: 20px 0px;
+}
+
+.FormField .field-cor {
+    height: 40px;
+}
