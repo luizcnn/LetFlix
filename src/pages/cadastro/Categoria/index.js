@@ -1,100 +1,105 @@
-import React, { useState } from 'react';
-import PageDefault from '../../../components/PageDefault';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
-import './Categoria.css'
+import Button from '../../../components/Button';
 
 function CadastroCategoria() {
+  const valoresIniciais = {
+    nome: '',
+    descricao: '',
+    cor: '',
+  };
+  const [categorias, setCategorias] = useState([]);
+  const [values, setValues] = useState(valoresIniciais);
 
-    const valoresIniciais = {
-        nome: '',
-        descricao: '',
-        cor: '',
-    };
-    const [categorias, setCategorias] = useState([]);
-    const [values, setValues] = useState(valoresIniciais);
+  function setValue(key, value) {
+    setValues({
+      ...values,
+      [key]: value,
+    });
+  }
 
-    function setValue(key, value) {
-        setValues({
-            ...values,
-            [key]: value
-        });
-    };
+  function handleChange(event) {
+    setValue(
+      event.target.getAttribute('name'),
+      event.target.value,
+    );
+  }
 
-    function handleChange(event) {
-        
-        setValue(
-            event.target.getAttribute('name'), 
-            event.target.value
-        );
-    };
+  // O useEffect é utilizado
+  useEffect(() => {
+    const URL = 'http://localhost:3001/categorias';
+    fetch(URL)
+      .then(async (resp) => {
+        const resposta = await resp.json();
+        setCategorias([
+          ...resposta,
+        ]);
+      });
+  }, []);
 
-    return (
-        <PageDefault>
-            <h1>Cadastro de Categoria: {values.nome}</h1>
+  return (
+    <PageDefault>
+      <h1>
+        Cadastro de Categoria:
+        {values.nome}
+      </h1>
 
-            <form 
-                className="form"
-                onSubmit={(e) => {
-                e.preventDefault()
-            
-                setCategorias([
-                    ...categorias,
-                    values
-                    ]);
+      <form
+        style={{ width: '100%' }}
+        onSubmit={(e) => {
+          e.preventDefault();
 
-                setValues(valoresIniciais)
-                
-            }}>
+          setCategorias([
+            ...categorias,
+            values,
+          ]);
 
-                <FormField
-                    className="field-nome" 
-                    value={values.nome}
-                    type="text"
-                    name="nome"
-                    label="Nome da Categoria:"
-                    placeholder="Nome"
-                    onChange={handleChange}
-                />
+          setValues(valoresIniciais);
+        }}
+      >
 
-                <FormField
-                    className="field-descricao"
-                    value={values.descricao}
-                    type="textArea"
-                    name="descricao"
-                    placeholder="Descrição"
-                    label="Descrição:"
-                    onChange={handleChange}
-                />
+        <FormField
+          value={values.nome}
+          type="text"
+          name="nome"
+          label="Nome da Categoria"
+          onChange={handleChange}
+        />
 
-                <FormField
-                    className="field-cor"
-                    type = "color"
-                    name="cor"
-                    placeholder="Cor"
-                    label="Cor:"
-                    value={values.cor}
-                    onChange={handleChange}
-                />
+        <FormField
+          value={values.descricao}
+          type="textarea"
+          name="descricao"
+          label="Descrição"
+          onChange={handleChange}
+        />
 
-                <button>
-                    Cadastrar
-                </button>
-            </form>
+        <FormField
+          type="color"
+          name="cor"
+          label="Cor"
+          value={values.cor}
+          onChange={handleChange}
+        />
 
-            <ul>
-                {categorias.map((categoria, index) => {
-                    return (
-                    <li key={`${categoria}:${index}`}>{categoria.nome}</li>
-                    );
-                })}
-            </ul>
-            
-            <Link to ="/">
-                Ir para Home
-            </Link>
-        </PageDefault>
-    )
-};
+        <Button>
+          Cadastrar
+        </Button>
+      </form>
+
+      <ul style={{ alignSelf: 'start' }}>
+        {categorias.map((categoria) => (
+          <li key={`${categoria.nome}`}>{categoria.nome}</li>
+        ))}
+      </ul>
+
+      <Link to="/">
+        Ir para Home
+      </Link>
+    </PageDefault>
+  );
+}
 
 export default CadastroCategoria;
