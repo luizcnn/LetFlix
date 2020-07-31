@@ -27,9 +27,10 @@ function CadastroCategoria() {
     );
   }
 
-  // O useEffect é utilizado
   useEffect(() => {
-    const URL = 'http://localhost:3001/categorias';
+    const URL = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://letflix.herokuapp.com/categorias';
     fetch(URL)
       .then(async (resp) => {
         const resposta = await resp.json();
