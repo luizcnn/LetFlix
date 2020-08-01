@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import './Categoria.css';
+import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -10,6 +13,10 @@ function CadastroCategoria() {
     descricao: '',
     cor: '',
   };
+  const URL = window.location.hostname.includes('localhost')
+    ? 'http://localhost:8080/categorias'
+    : 'https://letflix.herokuapp.com/categorias';
+
   const [categorias, setCategorias] = useState([]);
   const [values, setValues] = useState(valoresIniciais);
 
@@ -28,9 +35,6 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const URL = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080/categorias'
-      : 'https://letflix.herokuapp.com/categorias';
     fetch(URL)
       .then(async (resp) => {
         const resposta = await resp.json();
@@ -40,6 +44,21 @@ function CadastroCategoria() {
       });
   }, []);
 
+  function salvarCategoria() {
+    const formData = new FormData(document.getElementById('form'));
+    const data = {};
+
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+    // eslint-disable-next-line no-console
+    axios.post(URL, data).catch((e) => console.log(e));
+  }
+
+  // function editarCategoria(categoria) {
+  //   axios.get(`${URL}/${categoria.id}`).then((resp) => console.log(resp.data));
+  // }
+
   return (
     <PageDefault>
       <h1>
@@ -48,6 +67,7 @@ function CadastroCategoria() {
       </h1>
 
       <form
+        id="form"
         style={{ width: '100%' }}
         onSubmit={(e) => {
           e.preventDefault();
@@ -58,10 +78,12 @@ function CadastroCategoria() {
           ]);
 
           setValues(valoresIniciais);
+          salvarCategoria();
         }}
       >
 
         <FormField
+          id="form-nome"
           value={values.nome}
           type="text"
           name="nome"
@@ -70,6 +92,7 @@ function CadastroCategoria() {
         />
 
         <FormField
+          id="form-descricao"
           value={values.descricao}
           type="textarea"
           name="descricao"
@@ -78,6 +101,7 @@ function CadastroCategoria() {
         />
 
         <FormField
+          id="form-cor"
           type="color"
           name="cor"
           label="Cor"
@@ -85,21 +109,45 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        <Button>
-          Cadastrar
-        </Button>
+        <Button className="save-button">Salvar</Button>
+        <Button className="clean-button">Limpar</Button>
+
       </form>
 
-      <ul style={{ alignSelf: 'start' }}>
-        {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>{categoria.nome}</li>
-        ))}
-      </ul>
-
-      <Link to="/">
-        Ir para Home
-      </Link>
+      <table className="table">
+        <thead>
+          <tr>
+            <th className="th-categoria">Categoria</th>
+            <th className="th-descricao">Descrição</th>
+            <th className="th-cor">Cor</th>
+            <th className="th-editar">Editar</th>
+            <th className="th-remover">Remover</th>
+          </tr>
+        </thead>
+        <tbody>
+          {categorias.map((categoria) => (
+            <tr key={categoria.nome}>
+              <td className="td-nome">{categoria.nome}</td>
+              <td className="td-descricao">{categoria.descricao}</td>
+              <td className="td-cor">
+                <div className="color-table-data" style={{ backgroundColor: categoria.cor }} />
+              </td>
+              <td className="td-editar">
+                <Button className="edit-button">
+                  <i className="fa fa-pencil" />
+                </Button>
+              </td>
+              <td className="td-remover">
+                <Button className="remove-button">
+                  <i className="fa fa-trash" />
+                </Button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </PageDefault>
+
   );
 }
 
