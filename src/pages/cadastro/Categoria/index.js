@@ -6,6 +6,7 @@ import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import './Categoria.css';
 import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -18,21 +19,8 @@ function CadastroCategoria() {
     : 'https://letflix.herokuapp.com/categorias';
 
   const [categorias, setCategorias] = useState([]);
-  const [values, setValues] = useState(valoresIniciais);
 
-  function setValue(key, value) {
-    setValues({
-      ...values,
-      [key]: value,
-    });
-  }
-
-  function handleChange(event) {
-    setValue(
-      event.target.getAttribute('name'),
-      event.target.value,
-    );
-  }
+  const { handleChange, values, clearForm } = useForm(valoresIniciais);
 
   useEffect(() => {
     fetch(URL)
@@ -42,7 +30,7 @@ function CadastroCategoria() {
           ...resposta,
         ]);
       });
-  }, []);
+  }, [categorias.length]);
 
   function salvarCategoria() {
     const formData = new FormData(document.getElementById('form'));
@@ -55,9 +43,10 @@ function CadastroCategoria() {
     axios.post(URL, data).catch((e) => console.log(e));
   }
 
-  // function editarCategoria(categoria) {
-  //   axios.get(`${URL}/${categoria.id}`).then((resp) => console.log(resp.data));
-  // }
+  function removerCategoria(categoria) {
+    axios.delete(`${URL}/${categoria.id}`);
+    clearForm(valoresIniciais);
+  }
 
   return (
     <PageDefault>
@@ -77,17 +66,16 @@ function CadastroCategoria() {
             values,
           ]);
 
-          setValues(valoresIniciais);
-          salvarCategoria();
+          clearForm(valoresIniciais);
         }}
       >
 
         <FormField
-          id="form-nome"
-          value={values.nome}
+          id="form-titulo"
+          value={values.titulo}
           type="text"
-          name="nome"
-          label="Nome da Categoria"
+          name="titulo"
+          label="Título da Categoria"
           onChange={handleChange}
         />
 
@@ -109,7 +97,14 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        <Button className="save-button">Salvar</Button>
+        <Button
+          className="save-button"
+          onClick={() => {
+            salvarCategoria();
+          }}
+        >
+          Salvar
+        </Button>
         <Button className="clean-button">Limpar</Button>
 
       </form>
@@ -126,8 +121,8 @@ function CadastroCategoria() {
         </thead>
         <tbody>
           {categorias.map((categoria) => (
-            <tr key={categoria.nome}>
-              <td className="td-nome">{categoria.nome}</td>
+            <tr key={categoria.titulo}>
+              <td className="td-nome">{categoria.titulo}</td>
               <td className="td-descricao">{categoria.descricao}</td>
               <td className="td-cor">
                 <div className="color-table-data" style={{ backgroundColor: categoria.cor }} />
@@ -138,7 +133,16 @@ function CadastroCategoria() {
                 </Button>
               </td>
               <td className="td-remover">
-                <Button className="remove-button">
+                <Button
+                  className="remove-button"
+                  onClick={() => {
+                    removerCategoria(categoria);
+                    setCategorias([
+                      ...categorias,
+                      values,
+                    ]);
+                  }}
+                >
                   <i className="fa fa-trash" />
                 </Button>
               </td>
