@@ -6,7 +6,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import CadastroVideo from './pages/cadastro/Video';
 import CadastroCategoria from './pages/cadastro/Categoria';
-import Pagina404 from './pages/Pag404';
+import Pagina404 from './pages/Pg404';
 
 ReactDOM.render(
 
