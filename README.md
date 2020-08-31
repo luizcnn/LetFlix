@@ -65,7 +65,7 @@ Agora é só acessar a aplicação através da url http://localhost:3000/.
 - [Concurrently](https://www.npmjs.com/package/concurrently)
 - [Font Awesome](https://fontawesome.com/)
 
-## Funcionalidades a serem implementadas:
+## Funcionalidades a serem implementadas :thought_balloon: :
  - CRUD de vídeos
  - Remoção de Categorias
  - Autoplay do vídeo com o hover do mouse.
