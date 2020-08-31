@@ -1,68 +1,71 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# LetFlix
 
-## Available Scripts
+## Projeto desenvolvido durante a imersão React da Alura.
 
-In the project directory, you can run:
+## Confira o projeto!
+<p>Acesse o projeto <a href="https://letflix.vercel.app/">aqui</a></p>
 
-### `yarn start`
+<div style="display: flex; justify-content: center">
+  <img src="https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT"/>
+</div>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> Status do Projeto: Em desenvolvimento :warning:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Funcionalidades :trophy:
+- Redirecionamento para execução dos vídeos no youtube.
+  - Cadastro de Categorias
+- Caroulsel de vídeos.  
+- Sistema responsivo.
 
-### `yarn test`
+## Como rodar a aplicação :arrow_forward:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+No terminal, clone o projeto: 
 
-### `yarn build`
+```
+git clone https://github.com/luizcnn/LetFlix
+```
+Entre na pasta do projeto:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+cd LetFlix
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Instale as dependências via yarn ou npm:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+yarn install
+```
+ou
 
-### `yarn eject`
+```
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Execute a aplicação via npm ou yarn
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+yarn dev
+```
+ou
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm run dev
+```
+Agora é só acessar a aplicação através da url http://localhost:3000/.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Linguagens e Libs utilizadas :books:
 
-## Learn More
+- [React](https://reactjs.org/)
+- [React Router Dom](https://reactrouter.com/web/guides/quick-start)
+- [React Slick](https://react-slick.neostack.com/)
+- [Styled Components](https://styled-components.com/)
+- [Axios](https://github.com/axios/axios)
+- [JSON Server](https://github.com/typicode/json-server)
+- [ESLint](https://eslint.org/)
+- [Concurrently](https://www.npmjs.com/package/concurrently)
+- [Font Awesome](https://fontawesome.com/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Funcionalidades a serem implementadas:
+ - CRUD de vídeos
+ - Remoção de Categorias
+ - Autoplay do vídeo com o hover do mouse.
